@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedLoca — Aluguel de Equipamentos Hospitalares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>MedLoca</h1>
+    <p>Aluguel de Equipamentos Hospitalares</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Produtos Disponíveis</h2>
+      <ul>
+        <li>Cadeiras de rodas</li>
+        <li>Muletas</li>
+        <li>Andadores</li>
+        <li>Camas hospitalares</li>
+        <li>Cadeiras de banho</li>
+      </ul>
+    </section>
+
+    <section class="contato">
+      <h2>Atendimento</h2>
+      <p><strong>Horário:</strong> Seg. a Sex. 08h30–12h / 13h30–17h • Sáb. 09h–13h</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511989116195" target="_blank">(11) 98911-6195</a></p>
+      <p><strong>Região:</strong> Rua Glauco Velasquez 329 ,São Paulo</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="ano"></span> MedLoca — Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/5511989116195" class="whatsapp" target="_blank">💬</a>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
