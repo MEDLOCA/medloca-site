@@ -6,47 +6,79 @@
   <title>MedLoca — Aluguel de Equipamentos Hospitalares</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.5; }
-    header { background:#0073e6; color:#fff; padding:20px; text-align:center; }
-    header h1 { margin:0; font-size:2em; }
-    header p { margin:5px 0 0; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+    header {
+      background: #0073e6;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2em; }
+    header p { margin: 5px 0 0; }
 
-    main { padding:20px; }
+    main { padding: 20px; }
     .produtos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
     }
     .item {
-      border:1px solid #ccc;
-      padding:15px;
-      background:#f9f9f9;
-      border-radius:8px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
+      border: 1px solid #ccc;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .item img { max-width:100%; border-radius:5px; }
-    .info, .descricao { margin-top:10px; text-align:left; width:100%; }
-    .info h3 { margin-top:0; }
-    .info ul { padding-left:20px; }
+    .item img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .info, .descricao {
+      margin-top: 10px;
+      text-align: left;
+      width: 100%;
+    }
+    .info h3 { margin-top: 0; }
+    .info ul { padding-left: 20px; }
     .btn-whatsapp {
-      display:inline-block;
-      margin-top:10px;
-      padding:8px 12px;
-      background:#25D366;
-      color:#fff;
-      text-decoration:none;
-      border-radius:5px;
-      font-weight:bold;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
-    .btn-whatsapp:hover { background:#1ebe5d; }
-    .contato { margin-top:40px; }
-    footer { background:#0073e6; color:#fff; text-align:center; padding:15px; margin-top:40px; }
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+    }
+    .contato { margin-top: 40px; }
+    footer {
+      background: #0073e6;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
     .whatsapp {
-      position:fixed; bottom:20px; right:20px;
-      background:#25D366; color:#fff; border-radius:50%;
-      padding:15px; font-size:24px; text-decoration:none; z-index:1000;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      text-decoration: none;
+      z-index: 1000;
     }
   </style>
 </head>
@@ -61,7 +93,7 @@
 
       <!-- Andador -->
       <div class="item">
-        <img src="img/Andador.jpg" alt="Andador">
+        <img src="img/andador.jpg" alt="Andador">
         <div class="info">
           <h3>Andador</h3>
           <p>Andador Articulado Dobrável e Fixo Dobrável.</p>
@@ -81,7 +113,7 @@
 
       <!-- Guincho -->
       <div class="item">
-        <img src="img/Guinho.jpg" alt="Guincho Hospitalar">
+        <img src="img/guincho.jpg" alt="Guincho Hospitalar">
         <div class="info">
           <h3>Guincho Manual para Transferência — Até 150 kg</h3>
           <p>Equipamento indicado para transferência de pacientes com mobilidade reduzida.</p>
@@ -100,7 +132,7 @@
 
       <!-- Poltrona Articulável -->
       <div class="item">
-        <img src="img/Poltrona Site.jpg" alt="Poltrona Articulável Estofada">
+        <img src="img/poltrona_site.jpg" alt="Poltrona Articulável Estofada">
         <div class="info">
           <h3>Poltrona Articulável Estofada</h3>
           <ul>
@@ -118,7 +150,7 @@
 
       <!-- Suporte de Soro -->
       <div class="item">
-        <img src="img/Suporte de Soro.jpg" alt="Suporte de Soro">
+        <img src="img/suporte_soro.jpg" alt="Suporte de Soro">
         <div class="info">
           <h3>Suporte para Soro / Alimentação</h3>
           <p><strong>Venda e Locação:</strong> preço sob consulta.</p>
@@ -132,11 +164,12 @@
         </div>
       </div>
 
-      <!-- Cadeira de Rodas Modelo 1016 -->
+      <!-- Cadeira 1016 -->
       <div class="item">
-        <img src="img/cadeira 1016.png" alt="Cadeira de Rodas Modelo 1016">
+        <img src="img/cadeira_1016.png" alt="Cadeira de Rodas Modelo 1016">
         <div class="info">
           <h3>Cadeira de Rodas Modelo 1016</h3>
+          <p><strong>Locação:</strong> preço sob consulta.</p>
           <ul>
             <li>Estrutura em aço carbono</li>
             <li>Dobrável em X</li>
@@ -151,45 +184,42 @@
 
       <!-- Cadeira AVD 1 -->
       <div class="item">
-        <img src="img/cadeira-avd-1.jpg" alt="Cadeira AVD 1">
-        <div class="info">
-          <h3>Modelo AVD Alumínio</h3>
-          <ul>
-            <li>Construída em liga de alumínio aeronáutico temperado</li>
-            <li>Estofamento 100% nylon acolchoado</li>
-            <li>Almofada de 5 cm em espuma de alta densidade</li>
-            <li>Estrutura dobrável em duplo “X” com sistema de elevação</li>
-            <li>Sistema “quick release” nas rodas dianteiras</li>
-            <li>Freios bilaterais</li>
-            <li>Protetor de raios e lateral de roupas com abas</li>
-            <li>Apoio de braço escamoteável</li>
-            <li>Pedal removível “swingaway”</li>
-            <li>Largura total aberta: 66 cm / 70 cm</li>
-            <li>Capacidade: 120 kg</li>
-          </ul>
+        <img src="img/cadeira_avd_1.jpg" alt="Cadeira AVD 1">
+        <div class="descricao">
+          <p><strong>Modelo AVD Alumínio</strong></p>
+          <p><strong>Locação:</strong> preço sob consulta.</p>
+          <p><strong>Descrição:</strong></p>
+          <p>
+            • Construída em liga de alumínio aeronáutico temperado<br>
+            • Estofamento 100% nylon acolchoado<br>
+            • Almofada de 5 cm de espessura em espuma de alta densidade<br>
+            • Estrutura dobrável em duplo “X” com sistema de elevação<br>
+            • Sistema de desmontagem rápida “quick release” nas rodas dianteiras<br>
+            • Freios bilaterais<br>
+            • Protetor de raios e protetor lateral de roupas em nylon com abas<br>
+            • Apoio de braço escamoteável<br>
+            • Pedal removível com sistema “swingaway”<br>
+            • Largura total aberta: 66 cm (46 cm de assento) / 70 cm (50 cm de assento)<br>
+            • Capacidade de peso: 120 kg
+          </p>
+          <p>A cor e disponibilidade do produto e modelo estão sujeitos ao estoque.</p>
           <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
         </div>
       </div>
 
       <!-- Cadeira AVD 2 -->
       <div class="item">
-        <img src="img/cadeira avd 2.jpg" alt="Cadeira AVD 2">
+        <img src="img/cadeira_avd_2.jpg" alt="Cadeira AVD 2">
         <div class="info">
           <h3>Cadeira AVD 2</h3>
-          <ul>
-            <li>Estrutura em alumínio aeronáutico</li>
-            <li>Estofamento acolchoado</li>
-            <li>Sistema quick release nas rodas dianteiras</li>
-            <li>Freios bilaterais</li>
-            <li>Capacidade: 120 kg</li>
-          </ul>
+          <p>Construída em liga de alumínio aeronáutico temperado, estofamento acolchoado, sistema quick release nas rodas dianteiras, freios bilaterais, capacidade 120 kg.</p>
           <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
         </div>
       </div>
 
       <!-- Cadeiras de Banho -->
       <div class="item">
-        <img src="img/cadeira-banho-dobravel.png" alt="Cadeira de Banho Dobrável">
+        <img src="img/cadeira_banho_dobravel.jpg" alt="Cadeira de Banho Dobrável">
         <div class="info">
           <h3>Cadeira de Banho Dobrável</h3>
           <ul>
@@ -203,7 +233,7 @@
       </div>
 
       <div class="item">
-        <img src="img/cadeira-banho-fixa.jpg" alt="Cadeira de Banho Fixa">
+        <img src="img/cadeira_banho_fixa.jpg" alt="Cadeira de Banho Fixa">
         <div class="info">
           <h3>Cadeira de Banho Fixa</h3>
           <ul>
@@ -217,7 +247,7 @@
       </div>
 
       <div class="item">
-        <img src="img/cadeira-banho-max.png" alt="Cadeira de Banho Fixa 130kg">
+        <img src="img/cadeira_banho_max.jpg" alt="Cadeira de Banho Fixa 130kg">
         <div class="info">
           <h3>Cadeira de Banho Fixa — 130 kg</h3>
           <ul>
@@ -232,7 +262,7 @@
       </div>
 
       <div class="item">
-        <img src="img/cadeira-banho-obeso-250-kg.jpg" alt="Cadeira de Banho até 250 kg">
+        <img src="img/cadeira_banho_obeso_250kg.jpg" alt="Cadeira de Banho até 250 kg">
         <div class="info">
           <h3>Cadeira de Banho — Até 250 kg</h3>
           <ul>
@@ -246,7 +276,7 @@
 
       <!-- Cadeira FIT -->
       <div class="item">
-        <img src="img/cadeira-fit.png" alt="Cadeira de Rodas Modelo FIT">
+        <img src="img/cadeira_fit.jpg" alt="Cadeira de Rodas Modelo FIT">
         <div class="info">
           <h3>Cadeira de Rodas Modelo FIT</h3>
           <ul>
@@ -263,7 +293,7 @@
 
       <!-- Cadeira Infantil Genesys -->
       <div class="item">
-        <img src="img/cadeira-infantil-genesys.png" alt="Cadeira Infantil Genesys Ultra Lite X">
+        <img src="img/cadeira_infantil.jpg" alt="Cadeira Infantil Genesys Ultra Lite X">
         <div class="info">
           <h3>Cadeira Infantil Genesys Ultra Lite X</h3>
           <ul>
@@ -281,7 +311,7 @@
 
       <!-- Cadeira Poty -->
       <div class="item">
-        <img src="img/cadeira-poty.png" alt="Cadeira de Rodas Modelo Poty - Jaguaribe">
+        <img src="img/cadeira_poty.jpg" alt="Cadeira de Rodas Modelo Poty - Jaguaribe">
         <div class="info">
           <h3>Cadeira de Rodas Modelo Poty - Jaguaribe</h3>
           <ul>
@@ -297,7 +327,7 @@
 
       <!-- Cama Hospitalar -->
       <div class="item">
-        <img src="img/cama hospitalar.jpg" alt="Cama Hospitalar">
+        <img src="img/cama_hospitalar.jpg" alt="Cama Hospitalar">
         <div class="info">
           <h3>Cama Hospitalar Manual — 2 Movimentos</h3>
           <ul>
@@ -312,7 +342,7 @@
 
       <!-- Escada -->
       <div class="item">
-        <img src="img/escada 2 degraus.png" alt="Escada Auxiliar para Cama">
+        <img src="img/escada_2_degraus.png" alt="Escada Auxiliar para Cama">
         <div class="info">
           <h3>Escada Auxiliar para Acesso à Cama</h3>
           <ul>
@@ -326,7 +356,7 @@
 
       <!-- Mesa Auxiliar -->
       <div class="item">
-        <img src="img/mesa refeiçao leito.png" alt="Mesa Auxiliar para Refeição no Leito">
+        <img src="img/mesa_refeicao_leito.png" alt="Mesa Auxiliar para Refeição no Leito">
         <div class="info">
           <h3>Mesa Auxiliar para Refeição no Leito</h3>
           <ul>
@@ -340,7 +370,7 @@
 
       <!-- Muletas -->
       <div class="item">
-        <img src="img/muleta axilar.png" alt="Muleta Axilar">
+        <img src="img/muleta_axilar.png" alt="Muleta Axilar">
         <div class="info">
           <h3>Muleta Axilar</h3>
           <ul>
@@ -354,51 +384,27 @@
       </div>
 
       <div class="item">
-        <img src="img/muleta canadense.png" alt="Muleta Canadense Articulada">
+        <img src="img/muleta_canadense.png" alt="Muleta Canadense">
         <div class="info">
-          <h3>Muleta Canadense Articulada</h3>
+          <h3>Muleta Canadense</h3>
           <ul>
-            <li>Modelos: Adulto e Infantil</li>
-            <li>Altura regulável de 0,75 m até 1,25 m</li>
+            <li>Altura ajustável de 80 cm até 1,55 m</li>
+            <li>Estrutura em alumínio leve</li>
+            <li>Empunhadura anatômica</li>
             <li>Ponta emborrachada antiderrapante</li>
-          </ul>
-          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
-        </div>
-      </div>
-
-      <!-- Bengalas -->
-      <div class="item">
-        <img src="img/bengala-fixa.jpg" alt="Bengala Fixa">
-        <div class="info">
-          <h3>Bengala Fixa</h3>
-          <ul>
-            <li>Altura regulável</li>
-            <li>Ponta emborrachada antiderrapante</li>
-          </ul>
-          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="img/bengala articulada.png" alt="Bengala Articulada">
-        <div class="info">
-          <h3>Bengala Articulada</h3>
-          <ul>
-            <li>Altura regulável</li>
-            <li>Ponta emborrachada antiderrapante</li>
-            <li>Articulação ajustável</li>
           </ul>
           <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
         </div>
       </div>
 
     </section>
+
   </main>
 
-  <a href="https://wa.me/5511989116195" class="whatsapp" target="_blank">💬</a>
-
   <footer>
-    <p>&copy; 2025 MedLoca — Todos os direitos reservados</p>
+    <p>© 2025 MedLoca — Todos os direitos reservados</p>
   </footer>
+
+  <a href="https://wa.me/5511989116195" class="whatsapp" target="_blank">💬</a>
 </body>
 </html>
