@@ -7,38 +7,58 @@
   <style>
     /* Reset básico */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-
     body { background: #f7f7f7; color: #333; line-height: 1.6; }
     a { text-decoration: none; color: inherit; }
 
+    /* Header */
     header {
       background: #007bff;
       color: white;
-      padding: 20px 10%;
+      padding: 15px 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-
     header h1 { font-size: 1.8rem; }
-    nav a { margin-left: 20px; color: white; font-weight: bold; }
+    nav a { margin-left: 20px; color: white; font-weight: bold; transition: 0.3s; }
+    nav a:hover { opacity: 0.8; }
 
+    /* Menu mobile */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: white;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 20px; }
+
+    /* Main */
     main { padding: 40px 10%; }
+    .produtos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 
     .item {
       background: white;
       padding: 20px;
-      margin-bottom: 20px;
       border-radius: 10px;
-      display: flex;
-      gap: 20px;
-      align-items: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s;
     }
-
-    .item img { width: 200px; border-radius: 10px; }
-
-    .info h3 { color: #007bff; margin-bottom: 10px; }
+    .item:hover { transform: translateY(-5px); }
+    .item img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    .info h3 { color: #007bff; margin-bottom: 10px; text-align: center; }
     .info ul { list-style: disc; padding-left: 20px; margin-bottom: 10px; }
     .btn-whatsapp {
       display: inline-block;
@@ -49,13 +69,15 @@
       font-weight: bold;
       transition: 0.3s;
     }
-
     .btn-whatsapp:hover { background: #1ebe5d; }
 
+    /* Contato */
     .contato { background: #e9ecef; padding: 30px 20px; border-radius: 10px; margin-top: 40px; }
 
+    /* Footer */
     footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 40px; }
-    
+
+    /* WhatsApp flutuante */
     .whatsapp {
       position: fixed;
       bottom: 20px;
@@ -66,6 +88,16 @@
       padding: 15px;
       border-radius: 50%;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+
+    /* Responsividade mobile */
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav ul { flex-direction: column; display: none; width: 100%; margin-top: 10px; }
+      nav ul.show { display: flex; }
+      nav ul li { margin: 10px 0; }
+      .menu-toggle { display: flex; }
     }
   </style>
 </head>
@@ -74,16 +106,23 @@
   <!-- Cabeçalho -->
   <header>
     <h1>MedLoca</h1>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav>
-      <a href="#produtos">Produtos</a>
-      <a href="#contato">Contato</a>
+      <ul id="menu">
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <!-- Produtos -->
-    <section id="produtos">
-      <!-- Exemplo de item -->
+    <section id="produtos" class="produtos">
+      <!-- Produto Exemplo -->
       <div class="item">
         <img src="img/cadeira_banho_dobravel.jpg" alt="Cadeira de Banho Dobrável">
         <div class="info">
@@ -98,7 +137,7 @@
         </div>
       </div>
 
-      <!-- Aqui você repete o mesmo bloco para os outros produtos -->
+      <!-- Repita o bloco acima para os outros produtos (todos os que você listou) -->
     </section>
 
     <!-- Contato -->
@@ -114,10 +153,16 @@
     <p>&copy; <span id="ano"></span> MedLoca — Todos os direitos reservados.</p>
   </footer>
 
+  <!-- Botão WhatsApp flutuante -->
   <a href="https://wa.me/5511989116195" class="whatsapp" target="_blank">💬</a>
 
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
+
+    function toggleMenu() {
+      document.getElementById('menu').classList.toggle('show');
+    }
   </script>
+
 </body>
 </html>
