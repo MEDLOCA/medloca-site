@@ -6,18 +6,80 @@
   <title>MedLoca — Aluguel de Equipamentos Hospitalares</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f7f7; line-height: 1.6; }
-    header { background-color: #007BFF; color: white; padding: 20px; text-align: center; }
-    main { padding: 20px; max-width: 1200px; margin: 0 auto; }
-    .item { background-color: white; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: flex-start; }
-    .item img { max-width: 100%; border-radius: 10px; margin-bottom: 15px; }
-    .info h3 { margin-top: 0; color: #007BFF; }
-    .info ul { padding-left: 20px; margin-top: 10px; }
-    .btn-whatsapp { display: inline-block; margin-top: 10px; padding: 10px 20px; background-color: #25D366; color: white; font-weight: bold; text-decoration: none; border-radius: 5px; transition: 0.3s; }
-    .btn-whatsapp:hover { background-color: #128C7E; }
-    .contato { background-color: #fff; padding: 20px; border-radius: 10px; margin-top: 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { background-color: #007BFF; color: white; text-align: center; padding: 15px; margin-top: 40px; }
-    .whatsapp { position: fixed; bottom: 20px; right: 20px; font-size: 30px; text-decoration: none; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+    header {
+      background: #0073e6;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2em; }
+    header p { margin: 5px 0 0; }
+
+    main { padding: 20px; }
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .item {
+      border: 1px solid #ccc;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .item img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .info, .descricao {
+      margin-top: 10px;
+      text-align: left;
+      width: 100%;
+    }
+    .info h3 { margin-top: 0; }
+    .info ul { padding-left: 20px; }
+    .btn-whatsapp {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+    }
+    .contato { margin-top: 40px; }
+    footer {
+      background: #0073e6;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      text-decoration: none;
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
@@ -27,311 +89,292 @@
   </header>
 
   <main>
+    <section class="produtos">
 
-    <!-- Andador -->
-    <div class="item">
-      <img src="img/Andador.jpg" alt="Andador">
-      <div class="info">
-        <h3>Andador</h3>
-        <p>Andador Articulado Dobrável e Fixo Dobrável.</p>
-        <p><strong>Locação:</strong> preço sob consulta.</p>
-        <ul>
-          <li>Feito em Alumínio aeronáutico.</li>
-          <li>Dobrável e articulado.</li>
-          <li>Possui regulagem de altura.</li>
-          <li>Manopla emborrachada para segurar.</li>
-          <li>Pontas emborrachadas para maior segurança.</li>
-          <li>Suporte de 100 kg até 130 kg.</li>
-          <li>Leve e pode ser guardado em qualquer local.</li>
-          <li>A cor e disponibilidade do produto podem variar conforme estoque.</li>
-        </ul>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Andador -->
+      <div class="item">
+        <img src="img/Andador.jpg" alt="Andador">
+        <div class="info">
+          <h3>Andador</h3>
+          <p>Andador Articulado Dobrável e Fixo Dobrável.</p>
+          <p><strong>Locação:</strong> preço sob consulta.</p>
+          <ul>
+            <li>Feito em Alumínio aeronáutico</li>
+            <li>Dobrável e articulado</li>
+            <li>Possui regulagem de altura</li>
+            <li>Manopla emborrachada</li>
+            <li>Pontas emborrachadas</li>
+            <li>Suporte de 100 kg até 130 kg</li>
+            <li>Leve e fácil de guardar</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Guincho Hospitalar -->
-    <div class="item">
-      <img src="img/Guinho.jpg" alt="Guincho Hospitalar">
-      <div class="info">
-        <h3>Guincho Manual para Transferência — Até 150 kg</h3>
-        <p>Equipamento indicado para transferência de pacientes com mobilidade reduzida.</p>
-        <ul>
-          <li>Acionamento por alavanca manual</li>
-          <li>Rodízios na base facilitam a mobilidade</li>
-          <li>Estrutura reforçada para máxima segurança</li>
-          <li>Movimento suave e estável durante a elevação</li>
-          <li>Abertura da base permite encaixe em cadeira de rodas, cadeira de banho e poltrona</li>
-        </ul>
-        <p><strong>Indicado para:</strong> Pacientes acamados, idosos, pessoas com restrição motora, pós-operados ou em reabilitação.</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Guincho -->
+      <div class="item">
+        <img src="img/Guinho.jpg" alt="Guincho Hospitalar">
+        <div class="info">
+          <h3>Guincho Manual para Transferência — Até 150 kg</h3>
+          <p>Equipamento indicado para transferência de pacientes com mobilidade reduzida.</p>
+          <p><strong>Locação:</strong> preço sob consulta.</p>
+          <ul>
+            <li>Acionamento por alavanca manual</li>
+            <li>Rodízios na base</li>
+            <li>Estrutura reforçada</li>
+            <li>Movimento suave e estável</li>
+            <li>Abertura da base para cadeiras e poltronas</li>
+            <li>Acompanha tipóia ou cinta de sustentação</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Poltrona Articulável -->
-    <div class="item">
-      <img src="img/Poltrona Site.jpg" alt="Poltrona Articulável Estofada">
-      <div class="info">
-        <h3>Poltrona Articulável Estofada</h3>
-        <ul>
-          <li>Estrutura tubular com pintura epóxi</li>
-          <li>Encosto, assento, pernas e braços com estofamento anatômico revestido em corino preto</li>
-          <li>Braços e pernas articuláveis que acompanham a inclinação do encosto</li>
-          <li>Mecanismo articulado através de esfera lateral para maior suavidade</li>
-        </ul>
-        <p><strong>Dimensões aproximadas (aberta):</strong> Comprimento: 1,61 m / Largura: 0,81 m / Altura: 0,76 m / Assento: 0,55 x 0,55 m</p>
-        <p><strong>Peso:</strong> 25 kg | <strong>Capacidade:</strong> até 100 kg</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Poltrona Articulável -->
+      <div class="item">
+        <img src="img/Poltrona Site.jpg" alt="Poltrona Articulável Estofada">
+        <div class="info">
+          <h3>Poltrona Articulável Estofada</h3>
+          <ul>
+            <li>Estrutura tubular com pintura epóxi</li>
+            <li>Estofamento anatômico em corino preto</li>
+            <li>Braços e pernas articuláveis</li>
+            <li>Mecanismo lateral para suavidade</li>
+            <li>Dimensões: 1,61 x 0,81 x 0,76 m</li>
+            <li>Peso: 25 kg</li>
+            <li>Capacidade: até 100 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Suporte de Soro -->
-    <div class="item">
-      <img src="img/Suporte de Soro.jpg" alt="Suporte de Soro">
-      <div class="info">
-        <h3>Suporte para Soro / Alimentação</h3>
-        <ul>
-          <li>Suporte hospitalar resistente e ajustável</li>
-          <li>Regulagem de altura</li>
-          <li>Fabricado em inox</li>
-          <li>Modelos disponíveis: com rodízio ou sem rodízio</li>
-        </ul>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Suporte de Soro -->
+      <div class="item">
+        <img src="img/Suporte de Soro.jpg" alt="Suporte de Soro">
+        <div class="info">
+          <h3>Suporte para Soro / Alimentação</h3>
+          <p><strong>Venda e Locação:</strong> preço sob consulta.</p>
+          <ul>
+            <li>Resistente e ajustável</li>
+            <li>Altura regulável</li>
+            <li>Fabricado em inox</li>
+            <li>Modelos: com ou sem rodízio</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira de Rodas 1016 -->
-    <div class="item">
-      <img src="img/cadeira 1016.png" alt="Cadeira de Rodas Modelo 1016">
-      <div class="info">
-        <h3>Cadeira de Rodas Modelo 1016</h3>
-        <ul>
-          <li>Construída em aço carbono com estrutura reforçada</li>
-          <li>Estrutura dobrável em X</li>
-          <li>Estofamento em courvim</li>
-          <li>Freios bilaterais</li>
-          <li>Protetores de roupa laterais</li>
-        </ul>
-        <p><strong>Apoios de pernas:</strong> Articuláveis, eleváveis, reguláveis em altura</p>
-        <p><strong>Capacidade:</strong> até 100 kg | <strong>Medidas:</strong> Largura assento: 45 cm / Largura total aberta: 70 cm</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Cadeira de Rodas Modelo 1016 -->
+      <div class="item">
+        <img src="img/cadeira 1016.png" alt="Cadeira de Rodas Modelo 1016">
+        <div class="info">
+          <h3>Cadeira de Rodas Modelo 1016</h3>
+          <p><strong>Locação:</strong> preço sob consulta.</p>
+          <ul>
+            <li>Estrutura em aço carbono</li>
+            <li>Dobrável em X</li>
+            <li>Estofamento em courvim</li>
+            <li>Freios bilaterais</li>
+            <li>Apoios de pernas articuláveis e eleváveis</li>
+            <li>Capacidade até 100 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira AVD -->
-    <div class="item">
-      <img src="img/cadeira avd 2.jpg" alt="Cadeira AVD 2">
-      <div class="info">
-        <h3>Cadeira AVD 2</h3>
-        <ul>
-          <li>Construída em liga de alumínio aeronáutico temperado</li>
-          <li>Estofamento 100% nylon acolchoado</li>
-          <li>Almofada de 5 cm de espessura em espuma de alta densidade</li>
-          <li>Estrutura dobrável em duplo “X” com sistema de desmontagem rápida</li>
-          <li>Freios bilaterais, protetor de raios e protetor lateral de roupas</li>
-          <li>Apoio de braço escamoteável, pedal removível</li>
-          <li>Capacidade de peso: 120 Kg</li>
-        </ul>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Cadeira AVD -->
+      <div class="item">
+        <img src="img/cadeira avd 2.jpg" alt="Cadeira AVD">
+        <div class="info">
+          <h3>Cadeira AVD 2</h3>
+          <p>Construída em liga de alumínio aeronáutico temperado, estofamento acolchoado, sistema quick release nas rodas dianteiras, freios bilaterais, capacidade 120 kg.</p>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira de Banho Dobrável -->
-    <div class="item">
-      <img src="img/cadeira-banho-dobravel.png" alt="Cadeira de Banho Dobrável">
-      <div class="info">
-        <h3>Cadeira de Banho Dobrável</h3>
-        <ul>
-          <li>Estrutura dobrável, fácil transporte</li>
-          <li>Acompanha assento fixo</li>
-          <li>Suporta até 85 kg</li>
-          <li>Ideal para boxes estreitos</li>
-          <li>Pode ser utilizada por cima do vaso sanitário</li>
-        </ul>
-        <p><strong>Medidas:</strong> Largura assento: 40 cm / Largura total: 48 cm</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Cadeiras de Banho -->
+      <div class="item">
+        <img src="img/cadeira-banho-dobravel.png" alt="Cadeira de Banho Dobrável">
+        <div class="info">
+          <h3>Cadeira de Banho Dobrável</h3>
+          <ul>
+            <li>Estrutura dobrável</li>
+            <li>Assento fixo</li>
+            <li>Suporta até 85 kg</li>
+            <li>Ideal para boxes estreitos</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira de Banho Fixa -->
-    <div class="item">
-      <img src="img/cadeira-banho-fixa.jpg" alt="Cadeira de Banho Fixa">
-      <div class="info">
-        <h3>Cadeira de Banho Fixa</h3>
-        <ul>
-          <li>Construída com estrutura resistente</li>
-          <li>Acompanha assento fixo</li>
-          <li>Suporta até 85 kg</li>
-          <li>Ideal para boxes estreitos ou corredores</li>
-        </ul>
-        <p><strong>Medidas:</strong> Largura assento: 40 cm / Largura total: 45 cm</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <div class="item">
+        <img src="img/cadeira-banho-fixa.jpg" alt="Cadeira de Banho Fixa">
+        <div class="info">
+          <h3>Cadeira de Banho Fixa</h3>
+          <ul>
+            <li>Estrutura resistente</li>
+            <li>Assento fixo</li>
+            <li>Suporta até 85 kg</li>
+            <li>Ideal para boxes estreitos</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira de Banho 130kg -->
-    <div class="item">
-      <img src="img/cadeira-banho-max.png" alt="Cadeira de Banho Fixa 130kg">
-      <div class="info">
-        <h3>Cadeira de Banho Fixa — 130 kg</h3>
-        <ul>
-          <li>Estrutura fixa reforçada</li>
-          <li>Suporta até 130 kg</li>
-          <li>Assento 55 cm de largura</li>
-          <li>Freios bilaterais e rodízio na base</li>
-        </ul>
-        <p><strong>Medidas:</strong> Largura total: 62,5 cm</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <div class="item">
+        <img src="img/cadeira-banho-max.png" alt="Cadeira de Banho Fixa 130kg">
+        <div class="info">
+          <h3>Cadeira de Banho Fixa — 130 kg</h3>
+          <ul>
+            <li>Estrutura fixa reforçada</li>
+            <li>Suporta até 130 kg</li>
+            <li>Assento 55 cm</li>
+            <li>Freios bilaterais</li>
+            <li>Rodízio na base</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira de Banho 250kg -->
-    <div class="item">
-      <img src="img/cadeira-banho-obeso-250-kg.jpg" alt="Cadeira de Banho até 250 kg">
-      <div class="info">
-        <h3>Cadeira de Banho — Até 250 kg</h3>
-        <ul>
-          <li>Construída em inox de alta resistência</li>
-          <li>Suporta até 250 kg</li>
-          <li>Apoio para os pés dobrável</li>
-        </ul>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <div class="item">
+        <img src="img/cadeira-banho-obeso-250-kg.jpg" alt="Cadeira de Banho até 250 kg">
+        <div class="info">
+          <h3>Cadeira de Banho — Até 250 kg</h3>
+          <ul>
+            <li>Construída em inox</li>
+            <li>Suporta até 250 kg</li>
+            <li>Apoio para os pés dobrável</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira FIT -->
-    <div class="item">
-      <img src="img/cadeira-fit.png" alt="Cadeira de Rodas Modelo FIT">
-      <div class="info">
-        <h3>Cadeira de Rodas Modelo FIT</h3>
-        <ul>
-          <li>Construída em alumínio aeronáutico</li>
-          <li>Estofamento em nylon acolchoado</li>
-          <li>Almofada em espuma injetada</li>
-          <li>Estrutura dobrável em X</li>
-          <li>Sistema “quick release” nas rodas traseiras</li>
-        </ul>
-        <p><strong>Apoios de pés:</strong> Articuláveis, rebatíveis, removíveis, reguláveis em altura</p>
-        <p><strong>Capacidade:</strong> até 100 kg</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Cadeira FIT -->
+      <div class="item">
+        <img src="img/cadeira-fit.png" alt="Cadeira de Rodas Modelo FIT">
+        <div class="info">
+          <h3>Cadeira de Rodas Modelo FIT</h3>
+          <ul>
+            <li>Alumínio aeronáutico</li>
+            <li>Dobrável em X</li>
+            <li>Estofamento em nylon acolchoado</li>
+            <li>Almofada em espuma injetada</li>
+            <li>Sistema quick release nas rodas traseiras</li>
+            <li>Freios bilaterais reguláveis</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira Infantil Genesys -->
-    <div class="item">
-      <img src="img/cadeira-infantil-genesys.png" alt="Cadeira Infantil Genesys Ultra Lite X">
-      <div class="info">
-        <h3>Cadeira Infantil Genesys Ultra Lite X</h3>
-        <ul>
-          <li>Estrutura em liga de alumínio aeronáutico temperado</li>
-          <li>Dobrável em “X” com sistema de fechamento por articuladores</li>
-          <li>Estofamento 100% nylon acolchoado</li>
-          <li>Almofada integrada de 5 cm em espuma de alta densidade</li>
-          <li>Rodas traseiras 20” maciças, rodas dianteiras 5” maciças</li>
-          <li>Sistema “quick release” nas quatro rodas</li>
-          <li>Rodas anti-tombo</li>
-        </ul>
-        <p><strong>Capacidade:</strong> até 70 kg</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Cadeira Infantil Genesys -->
+      <div class="item">
+        <img src="img/cadeira-infantil-genesys.png" alt="Cadeira Infantil Genesys Ultra Lite X">
+        <div class="info">
+          <h3>Cadeira Infantil Genesys Ultra Lite X</h3>
+          <ul>
+            <li>Estrutura em alumínio aeronáutico</li>
+            <li>Dobrável em X</li>
+            <li>Estofamento 100% nylon acolchoado</li>
+            <li>Rodas traseiras 20" maciças</li>
+            <li>Rodas dianteiras 5" maciças</li>
+            <li>Freios bilaterais</li>
+            <li>Capacidade até 70 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cadeira Poty -->
-    <div class="item">
-      <img src="img/cadeira-poty.png" alt="Cadeira de Rodas Modelo Poty - Jaguaribe">
-      <div class="info">
-        <h3>Cadeira de Rodas Modelo Poty - Jaguaribe</h3>
-        <ul>
-          <li>Construída em aço com estrutura dobrável em duplo X</li>
-          <li>Estofamento em nylon acolchoado</li>
-          <li>Almofada em espuma injetada</li>
-          <li>Rodas traseiras 24” em alumínio com pneus infláveis</li>
-          <li>Rodas dianteiras 6” maciças</li>
-          <li>Freios bilaterais reguláveis</li>
-          <li>Protetores de roupa com aba</li>
-        </ul>
-        <p><strong>Apoios de pés:</strong> Articuláveis, reguláveis em altura</p>
-        <p><strong>Capacidade:</strong> até 120 kg</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Cadeira Poty -->
+      <div class="item">
+        <img src="img/cadeira-poty.png" alt="Cadeira de Rodas Modelo Poty - Jaguaribe">
+        <div class="info">
+          <h3>Cadeira de Rodas Modelo Poty - Jaguaribe</h3>
+          <ul>
+            <li>Estrutura em aço, dobrável em duplo X</li>
+            <li>Estofamento acolchoado</li>
+            <li>Rodas traseiras 24” com pneus infláveis</li>
+            <li>Freios bilaterais reguláveis</li>
+            <li>Capacidade até 120 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Cama Hospitalar -->
-    <div class="item">
-      <img src="img/cama hospitalar.jpg" alt="Cama Hospitalar">
-      <div class="info">
-        <h3>Cama Hospitalar Manual — 2 Movimentos</h3>
-        <ul>
-          <li>Elevação de cabeceira e dos pés</li>
-          <li>Acionamento por 2 manivelas</li>
-          <li>Suporta até 115 kg</li>
-          <li>Grades laterais de segurança</li>
-          <li>Colchão hospitalar com capa impermeável</li>
-          <li>Sistema de rodízio com freio diagonal</li>
-        </ul>
-        <p><strong>Medidas:</strong> 2,00 m comprimento / 0,88 m largura / 0,62-0,76 m altura</p>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Cama Hospitalar -->
+      <div class="item">
+        <img src="img/cama hospitalar.jpg" alt="Cama Hospitalar">
+        <div class="info">
+          <h3>Cama Hospitalar Manual — 2 Movimentos</h3>
+          <ul>
+            <li>Elevação de cabeceira e dos pés</li>
+            <li>Acionamento por 2 manivelas</li>
+            <li>Suporta até 115 kg</li>
+            <li>Acompanha grades laterais e colchão hospitalar</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Escada Auxiliar -->
-    <div class="item">
-      <img src="img/escada 2 degraus.png" alt="Escada Auxiliar para Cama">
-      <div class="info">
-        <h3>Escada Auxiliar para Acesso à Cama</h3>
-        <ul>
-          <li>Resistente, leve e fácil de transportar</li>
-          <li>2 degraus para maior segurança</li>
-          <li>Evita esforços desnecessários</li>
-          <li>Ideal para pessoas com dificuldade de mobilidade</li>
-        </ul>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Escada -->
+      <div class="item">
+        <img src="img/escada 2 degraus.png" alt="Escada Auxiliar para Cama">
+        <div class="info">
+          <h3>Escada Auxiliar para Acesso à Cama</h3>
+          <ul>
+            <li>2 degraus</li>
+            <li>Resistente e leve</li>
+            <li>Facilita subir e descer da cama</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Mesa de Refeição -->
-    <div class="item">
-      <img src="img/mesa-refeicao.jpg" alt="Mesa de Refeição Hospitalar">
-      <div class="info">
-        <h3>Mesa de Refeição Hospitalar</h3>
-        <ul>
-          <li>Estrutura em inox</li>
-          <li>Altura regulável</li>
-          <li>Tampo móvel com inclinação ajustável</li>
-          <li>Leve e fácil de limpar</li>
-        </ul>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Mesa Auxiliar -->
+      <div class="item">
+        <img src="img/mesa refeiçao leito.png" alt="Mesa Auxiliar para Refeição no Leito">
+        <div class="info">
+          <h3>Mesa Auxiliar para Refeição no Leito</h3>
+          <ul>
+            <li>Altura regulável</li>
+            <li>Estrutura leve e resistente</li>
+            <li>Capacidade até 6 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Muleta Axilar -->
-    <div class="item">
-      <img src="img/muleta-axilar.jpg" alt="Muleta Axilar">
-      <div class="info">
-        <h3>Muleta Axilar</h3>
-        <ul>
-          <li>Alumínio leve</li>
-          <li>Ajuste de altura fácil e seguro</li>
-          <li>Ponteira emborrachada antideslizante</li>
-          <li>Indicada para apoio temporário de mobilidade</li>
-        </ul>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Muleta Axilar -->
+      <div class="item">
+        <img src="img/muleta axilar.png" alt="Muleta Axilar">
+        <div class="info">
+          <h3>Muleta Axilar</h3>
+          <ul>
+            <li>Tamanhos: P, M, G e Infantil</li>
+            <li>Altura ajustável de 1,22 m até 1,98 m</li>
+            <li>Estrutura em alumínio leve</li>
+            <li>Ponta emborrachada antiderrapante</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Muleta Canadense -->
-    <div class="item">
-      <img src="img/muleta-canadense.png" alt="Muleta Canadense">
-      <div class="info">
-        <h3>Muleta Canadense</h3>
-        <ul>
-          <li>Estrutura em alumínio</li>
-          <li>Altura regulável</li>
-          <li>Ponteira emborrachada antideslizante</li>
-          <li>Indicada para pacientes com mobilidade reduzida</li>
-        </ul>
-        <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 Contatar via WhatsApp</a>
+      <!-- Muleta Canadense -->
+      <div class="item">
+        <img src="img/muleta canadense.png" alt="Muleta Canadense Articulada">
+        <div class="info">
+          <h3>Muleta Canadense Articulada</h3>
+          <ul>
+            <li>Modelos: Adulto e Infantil</li>
+            <li>Altura ajustável de 1,15 m até 2,0 m</li>
+            <li>Alumínio leve e resistente</li>
+            <li>Ponta de borracha antiderrapante</li>
+            <li>Suporte de peso: 100 kg até 130 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
       </div>
-    </div>
+
+    </section>
 
     <!-- Contato -->
     <section class="contato">
