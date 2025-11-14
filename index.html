@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MedLoca - Equipamentos Hospitalares</title>
   <style>
-    /* Reset básico */
+    /* Reset e base */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background: #f7f7f7; color: #333; line-height: 1.6; }
     a { text-decoration: none; color: inherit; }
@@ -23,7 +23,9 @@
       z-index: 1000;
     }
     header h1 { font-size: 1.8rem; }
-    nav a { margin-left: 20px; color: white; font-weight: bold; transition: 0.3s; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 20px; }
+    nav a { color: white; font-weight: bold; transition: 0.3s; }
     nav a:hover { opacity: 0.8; }
 
     /* Menu mobile */
@@ -39,12 +41,10 @@
       margin: 4px 0;
       border-radius: 2px;
     }
-    nav ul { display: flex; list-style: none; }
-    nav ul li { margin-left: 20px; }
 
     /* Main */
     main { padding: 40px 10%; }
-    .produtos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .produtos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
     .item {
       background: white;
@@ -91,8 +91,10 @@
       z-index: 1000;
     }
 
-    /* Responsividade mobile */
-    @media (max-width: 768px) {
+    /* Responsividade */
+    @media (max-width: 992px) { .produtos { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { 
+      .produtos { grid-template-columns: 1fr; }
       header { flex-direction: column; align-items: flex-start; }
       nav ul { flex-direction: column; display: none; width: 100%; margin-top: 10px; }
       nav ul.show { display: flex; }
@@ -122,7 +124,7 @@
   <main>
     <!-- Produtos -->
     <section id="produtos" class="produtos">
-      <!-- Produto Exemplo -->
+
       <div class="item">
         <img src="img/cadeira_banho_dobravel.jpg" alt="Cadeira de Banho Dobrável">
         <div class="info">
@@ -137,7 +139,165 @@
         </div>
       </div>
 
-      <!-- Repita o bloco acima para os outros produtos (todos os que você listou) -->
+      <div class="item">
+        <img src="img/cadeira_banho_fixa.jpg" alt="Cadeira de Banho Fixa">
+        <div class="info">
+          <h3>Cadeira de Banho Fixa</h3>
+          <ul>
+            <li>Estrutura resistente</li>
+            <li>Assento fixo</li>
+            <li>Suporta até 85 kg</li>
+            <li>Ideal para boxes estreitos</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/cadeira_banho_max.jpg" alt="Cadeira de Banho Máx 130 kg">
+        <div class="info">
+          <h3>Cadeira de Banho Fixa — 130 kg</h3>
+          <ul>
+            <li>Estrutura fixa reforçada</li>
+            <li>Suporta até 130 kg</li>
+            <li>Assento 55 cm</li>
+            <li>Freios bilaterais</li>
+            <li>Rodízio na base</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/cadeira_banho_250kg.jpg" alt="Cadeira de Banho até 250 kg">
+        <div class="info">
+          <h3>Cadeira de Banho — Até 250 kg</h3>
+          <ul>
+            <li>Construída em inox</li>
+            <li>Suporta até 250 kg</li>
+            <li>Apoio para os pés dobrável</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/cadeira_fit.jpg" alt="Cadeira de Rodas Modelo FIT">
+        <div class="info">
+          <h3>Cadeira de Rodas Modelo FIT</h3>
+          <ul>
+            <li>Alumínio aeronáutico</li>
+            <li>Dobrável em X</li>
+            <li>Estofamento em nylon acolchoado</li>
+            <li>Almofada em espuma injetada</li>
+            <li>Sistema quick release nas rodas traseiras</li>
+            <li>Freios bilaterais reguláveis</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/cadeira_infantil.jpg" alt="Cadeira Infantil Genesys Ultra Lite X">
+        <div class="info">
+          <h3>Cadeira Infantil Genesys Ultra Lite X</h3>
+          <ul>
+            <li>Estrutura em alumínio aeronáutico</li>
+            <li>Dobrável em X</li>
+            <li>Estofamento 100% nylon acolchoado</li>
+            <li>Rodas traseiras 20" maciças</li>
+            <li>Rodas dianteiras 5" maciças</li>
+            <li>Freios bilaterais</li>
+            <li>Capacidade até 70 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/cadeira_poty.jpg" alt="Cadeira de Rodas Modelo Poty - Jaguaribe">
+        <div class="info">
+          <h3>Cadeira de Rodas Modelo Poty - Jaguaribe</h3>
+          <ul>
+            <li>Estrutura em aço, dobrável em duplo X</li>
+            <li>Estofamento acolchoado</li>
+            <li>Rodas traseiras 24” com pneus infláveis</li>
+            <li>Freios bilaterais reguláveis</li>
+            <li>Capacidade até 120 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/cama_hospitalar.jpg" alt="Cama Hospitalar">
+        <div class="info">
+          <h3>Cama Hospitalar Manual — 2 Movimentos</h3>
+          <ul>
+            <li>Elevação de cabeceira e dos pés</li>
+            <li>Acionamento por 2 manivelas</li>
+            <li>Suporta até 115 kg</li>
+            <li>Acompanha grades laterais e colchão hospitalar</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/escada_2_degraus.jpg" alt="Escada Auxiliar para Cama">
+        <div class="info">
+          <h3>Escada Auxiliar para Acesso à Cama</h3>
+          <ul>
+            <li>2 degraus</li>
+            <li>Resistente e leve</li>
+            <li>Facilita subir e descer da cama</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/mesa_refeicao_leito.jpg" alt="Mesa Auxiliar para Refeição no Leito">
+        <div class="info">
+          <h3>Mesa Auxiliar para Refeição no Leito</h3>
+          <ul>
+            <li>Altura regulável</li>
+            <li>Estrutura leve e resistente</li>
+            <li>Capacidade até 6 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/muleta_axilar.jpg" alt="Muleta Axilar">
+        <div class="info">
+          <h3>Muleta Axilar</h3>
+          <ul>
+            <li>Tamanhos: P, M, G e Infantil</li>
+            <li>Altura ajustável de 1,22 m até 1,98 m</li>
+            <li>Estrutura em alumínio leve</li>
+            <li>Ponta emborrachada antiderrapante</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/muleta_canadense.jpg" alt="Muleta Canadense Articulada">
+        <div class="info">
+          <h3>Muleta Canadense Articulada</h3>
+          <ul>
+            <li>Modelos: Adulto e Infantil</li>
+            <li>Altura ajustável de 1,15 m até 2,0 m</li>
+            <li>Alumínio leve e resistente</li>
+            <li>Ponta de borracha antiderrapante</li>
+            <li>Suporte de peso: 100 kg até 130 kg</li>
+          </ul>
+          <a href="https://wa.me/5511989116195" class="btn-whatsapp" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
     </section>
 
     <!-- Contato -->
@@ -153,16 +313,13 @@
     <p>&copy; <span id="ano"></span> MedLoca — Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Botão WhatsApp flutuante -->
   <a href="https://wa.me/5511989116195" class="whatsapp" target="_blank">💬</a>
 
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
-
     function toggleMenu() {
       document.getElementById('menu').classList.toggle('show');
     }
   </script>
-
 </body>
 </html>
