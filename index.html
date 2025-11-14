@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MedLoca - Equipamentos Hospitalares</title>
+  <title>MédLoca - Aluguel de Equipamento Hospitalar</title>
   <style>
     /* Reset e base */
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
@@ -14,33 +14,13 @@
     header {
       background: #007bff;
       color: white;
-      padding: 15px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 20px 10%;
+      text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
     }
     header h1 { font-size: 1.8rem; }
-    nav ul { display: flex; list-style: none; }
-    nav ul li { margin-left: 20px; }
-    nav a { color: white; font-weight: bold; transition: 0.3s; }
-    nav a:hover { opacity: 0.8; }
-
-    /* Menu mobile */
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background: white;
-      margin: 4px 0;
-      border-radius: 2px;
-    }
 
     /* Main */
     main { padding: 40px 10%; }
@@ -93,37 +73,19 @@
 
     /* Responsividade */
     @media (max-width: 992px) { .produtos { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { 
-      .produtos { grid-template-columns: 1fr; }
-      header { flex-direction: column; align-items: flex-start; }
-      nav ul { flex-direction: column; display: none; width: 100%; margin-top: 10px; }
-      nav ul.show { display: flex; }
-      nav ul li { margin: 10px 0; }
-      .menu-toggle { display: flex; }
-    }
+    @media (max-width: 600px) { .produtos { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
   <!-- Cabeçalho -->
   <header>
-    <h1>MedLoca</h1>
-    <div class="menu-toggle" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
-      <ul id="menu">
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <h1>MédLoca — Aluguel de Equipamento Hospitalar</h1>
   </header>
 
   <main>
     <!-- Produtos -->
-    <section id="produtos" class="produtos">
+    <section class="produtos">
 
       <div class="item">
         <img src="img/cadeira_banho_dobravel.jpg" alt="Cadeira de Banho Dobrável">
@@ -301,7 +263,7 @@
     </section>
 
     <!-- Contato -->
-    <section class="contato" id="contato">
+    <section class="contato">
       <h2>Atendimento</h2>
       <p><strong>Horário:</strong> Seg. a Sex. 08h30–12h / 13h30–17h • Sáb. 09h–13h</p>
       <p><strong>WhatsApp:</strong> <a href="https://wa.me/5511989116195" target="_blank">(11) 98911-6195</a></p>
@@ -310,16 +272,15 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="ano"></span> MedLoca — Todos os direitos reservados.</p>
+    <p>&copy; <span id="ano"></span> MédLoca — Todos os direitos reservados.</p>
   </footer>
 
+  <!-- Botão WhatsApp flutuante -->
   <a href="https://wa.me/5511989116195" class="whatsapp" target="_blank">💬</a>
 
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
-    function toggleMenu() {
-      document.getElementById('menu').classList.toggle('show');
-    }
   </script>
+
 </body>
 </html>
